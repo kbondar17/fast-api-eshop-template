@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  alembic:
+    image: alembic:latest
+    build:
+      context: ${PWD}
+      dockerfile: docker/Dockerfile.alembic
+    env_file:
+      - ${PWD}/.env
+    volumes:
+      - ${PWD}/:/app

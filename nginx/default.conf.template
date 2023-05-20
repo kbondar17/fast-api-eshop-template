@@ -1,0 +1,12 @@
+upstream www {
+    server backend:${BACKEND_PORT};
+}
+
+server {
+    listen [::]:${BACKEND_PORT};
+    listen ${BACKEND_PORT};
+
+    location / {
+        proxy_pass http://www;
+    }
+}
