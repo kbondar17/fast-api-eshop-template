@@ -17,20 +17,20 @@ To run the project locally:
 python3 app/main.py
 ```
 
-2.4 You can find OpenAPI schema at http://localhost/docs
+You can find OpenAPI schema at http://localhost/docs
 
-2.5 You can log in as a seller or a supplier with `supplier@mail.ru` and `seller@mail.ru` respectively. Password -
+You can log in as a seller or a supplier with `supplier@mail.ru` and `seller@mail.ru` respectively. Password -
 `Password1!`
 
-**Step 3:** Understand the architecture
+**Architecture**
 
-3.1 You might be overwhelmed by the amount of custom elements in the project. But let me reassure you that it’s quite
+You might be overwhelmed by the amount of custom elements in the project. But let me reassure you that it’s quite
 easy to use once you get the gist.
 
-3.2 SQLAlchemy models defined at `app/orm`. Notice that a lot of commonly used types are already defined:
+SQLAlchemy models defined at `app/orm`. Notice that a lot of commonly used types are already defined:
 `bool_true`, `decimal_10_2`, `moscow_datetime_timezone` etc. Feel free to add new.
 
-3.3 Look at `app/core/app/crud/__init__.py`. It’s where main class for CRUD operations is defined:
+Look at `app/core/app/crud/__init__.py`. It’s where main class for CRUD operations is defined:
 
 ```python
 class _CRUD:
@@ -65,10 +65,10 @@ await crud.products.select.many(
 )
 ```
 
-3.4 All inputs and outputs of any endpoint should be typed. You can
+All inputs and outputs of any endpoint should be typed. You can
 find schemas at app/schemas. Feel free to add new schemas but examine existing ones first.
 
-3.5 All common functions (*auth*, *session*, *AWS interfaces*) are kept at app/core/depends. Before writing new piece of
+All common functions (*auth*, *session*, *AWS interfaces*) are kept at app/core/depends. Before writing new piece of
 code
 make sure it has not been written yet ;)
 
