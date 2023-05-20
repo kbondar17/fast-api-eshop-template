@@ -2,7 +2,7 @@
 
 Production-ready backend template for a b2b e-shop. Includes auth, e-mail notifications, basic items management for business (suppliers) and customers (sellers). 
 
-Start the project:
+**Set up:**
 
 ```shell
 make build
